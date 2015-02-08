@@ -135,17 +135,17 @@ class exports.LayerDraggable extends BaseClass
 			layerHeightTooSmall = @layer.height < value.height
 
 			if layerWidthTooSmall
-				x = 0
+				x = value.x
 				width = @layer.width
 			else
-				x = - @layer.width + value.width
+				x = value.x - @layer.width + value.width
 				width = @layer.width * 2 - value.width
 
 			if layerHeightTooSmall
-				y = 0
+				y = value.y
 				height = @layer.height
 			else
-				y = - @layer.height + value.height
+				y = value.y - @layer.height + value.height
 				height = @layer.height * 2 - value.height
 
 			@maxDragFrame = {x, y, width, height}
